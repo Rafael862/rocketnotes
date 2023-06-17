@@ -1,4 +1,4 @@
-import "./styles.css";
+import "./styles.js";
 
 export function Details(){
   
