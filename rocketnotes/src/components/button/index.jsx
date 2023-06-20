@@ -4,7 +4,7 @@ export function Button(){
 
     return(
     <Container type="button">
-        meu botão
+        meu botão 1
     </Container>
     );
 }
