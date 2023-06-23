@@ -1,5 +1,5 @@
 import "./styles.js";
-import { Container, Links } from "./styles.js";
+import { Container, Links, Content } from "./styles.js";
 
 
 import { Header } from "../../components/header/index.jsx";
@@ -14,7 +14,11 @@ export function Details(){
     <Container>
     <Header />
 
+    <main>
+      <Content>
     <ButtonText title="Excluir nota" />
+    <h1>Introdução ao React</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nesciunt cupiditate, voluptate incidunt quos fugiat nemo repudiandae beatae numquam quia. Expedita natus facilis explicabo? Nesciunt blanditiis odio tempore a doloremque possimus.</p>
     <Section title="Links úteis">
     <Links>
       <li><a href="#">http://www.rocketseat.com.br/</a></li>
@@ -28,6 +32,8 @@ export function Details(){
     </Section>
 
     <Button title="Voltar"/>
+    </Content>
+    </main>
     </Container>
   )
 }
