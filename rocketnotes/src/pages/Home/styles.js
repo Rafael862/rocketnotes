@@ -17,12 +17,24 @@ export const Container  = styled.div`
 
 `;
 
-export const Brand  = styled.div``;
+export const Brand  = styled.div`
+    grid-area: brand;
+    background: red;
+`;
 
-export const Menu  = styled.ul``;
+export const Menu  = styled.ul` 
+grid-area: menu;
+background: green;`;
 
-export const Search  = styled.div``;
+export const Search  = styled.div` 
+grid-area: search;
+background: violet;`;
 
-export const Content  = styled.div``;
+export const Content  = styled.div` 
+grid-area: content;
+background: blue;`;
 
-export const NewNote = styled.button``;
+
+export const NewNote = styled.button`
+ grid-area: newnote;
+    background: yellow;`;
