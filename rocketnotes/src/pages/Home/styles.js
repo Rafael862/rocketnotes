@@ -1,4 +1,6 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
+
 
 export const Container  = styled.div`
     width: 100%;
@@ -22,16 +24,14 @@ export const Brand  = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-
-    border-bottom-width: 1px;
-    border-bottom: solid;
-    border-bottom-color: ${({ theme }) => theme.BACKGROUND_700};
     
+
     background-color: ${({ theme }) => theme.BACKGROUND_900};
 
     > h1 {
         font-size: 24px;
         color: ${({ theme }) => theme.COLORS.ORANGE};
+        
     }
 `;
 
@@ -59,10 +59,10 @@ overflow-y: auto;
 `;
 
 
-export const NewNote = styled.button`
+export const NewNote = styled(Link)`
  grid-area: newnote;
  background-color: ${({ theme }) => theme.COLORS.ORANGE};
- border: none;
+ color: ${({ theme }) => theme.COLORS.BACKGROUND_900};
 
  display: flex;
  align-items: center;

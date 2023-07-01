@@ -15,10 +15,10 @@ export const Container = styled.div`
         padding: 0 124px;
 
         svg {
-        background: ${({ theme }) => theme.COLORS.BACKGROUND_100};
         font-size: 24px;
-
-        }
+        color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
+    }
+    
     }
 
 `;
@@ -71,8 +71,8 @@ export const Avatar = styled.div`
         svg {
             width: 20px;
             height: 20px;
-            color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
-
+            
+            color: ${({ theme }) => theme.COLORS.BACKGROUND_100};
         }
     }
 
