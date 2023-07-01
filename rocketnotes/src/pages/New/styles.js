@@ -11,6 +11,15 @@ export const Container = styled.div`
     "header"
     "content";
     
+    main {
+        grid-area: content;
+        overflow-y: auto;
+    }
+    .tags {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
 
 `;
 
