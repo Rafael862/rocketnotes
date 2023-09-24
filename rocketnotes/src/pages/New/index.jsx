@@ -5,11 +5,20 @@ import { Button } from '../../components/button';
 import { Header } from '../../components/header';
 import { Input } from '../../components/Input';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 
 import { Container, Form } from './styles';
 
 export function New(){
+    const [links, setLinks] = useState([]);
+    const [newLink, setNewlink] = useState("");
+
+    function handleAddLink(){
+        setLinks(prevState => [...prevState, newLink]);
+        setNewlink("");
+    }
+
     return(
         <Container>
             <Header/>
@@ -22,9 +31,24 @@ export function New(){
                     </header>
                     <Input placeholder="Título"/>
                     <Textarea placeholder="Observações"/>
+
                     <Section title="Links úteis">
-                        <NoteItem value="https://rocketseat.com.br"/>
-                        <NoteItem isNew placeholder="Novo link"/>
+                        {
+                            links.map((link, index) =>(
+                                <NoteItem 
+                                key={String(index)}
+                                value={link}
+                                onClick={() =>{}}
+                                />
+                            ))
+                        }
+                        <NoteItem 
+                        isNew 
+                        placeholder="Novo link"
+                        value={newLink}
+                        onChange={e => setNewlink(e.target.value)}
+                        onClick={handleAddLink}
+                        />
                     </Section>
 
                     <Section title="Marcadores">
@@ -33,7 +57,9 @@ export function New(){
                             <NoteItem isNew placeholder="Nova tag"/>
                         </div>
                     </Section>
+
                     <Button title="Salvar"/>
+
                 </Form>
             </main>
         </Container>
