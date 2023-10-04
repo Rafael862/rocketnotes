@@ -58,12 +58,12 @@ export function Profile(){
                 <FiArrowLeft />
                 </button>
             </header>
-
+            
             <Form>
 
                 <Avatar>
                     <img 
-                    src={avatar}
+                    src={avatarUrl}
                     alt="Foto do usuário" />
                     <label htmlFor="avatar">
                         <FiCamera/>
